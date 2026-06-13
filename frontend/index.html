@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Style Calendar</title>
+    <!-- 구글 폰트: 우아한 명조 느낌의 Cormorant Garamond, 깔끔한 고딕 느낌의 Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- 우리가 만든 페인트칠(CSS) 불러오기 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="canvas-container">
+        <!-- 달력 헤더 (제목과 컨트롤러) -->
+        <header class="calendar-header">
+            <h1 class="display-title">Calendar</h1>
+            <div class="calendar-controls">
+                <button id="prev-month" class="btn btn-secondary" aria-label="이전 달">&larr;</button>
+                <h2 id="current-month-year" class="display-subtitle">June 2026</h2>
+                <button id="next-month" class="btn btn-secondary" aria-label="다음 달">&rarr;</button>
+                <button id="today-btn" class="btn btn-primary">Today</button>
+            </div>
+        </header>
+
+        <!-- 달력 본체 (다크 네이비 카드) -->
+        <section class="calendar-card">
+            <!-- 요일과 날짜들이 들어갈 격자 무늬(Grid) 상자 -->
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- 요일 부분 -->
+                <div class="weekday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+                
+                <!-- 자바스크립트가 여기에 날짜 붕어빵들을 찍어낼 겁니다요! -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 모달 창 (일정 입력용 팝업) -->
+    <div id="schedule-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 class="modal-title">Add Schedule</h3>
+            <p id="modal-date" class="modal-date-text"></p>
+            <input type="text" id="schedule-input" class="text-input" placeholder="일정을 입력하세요..." />
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="modal-save" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 달력 로직(전기 배선) 불러오기 -->
+    <script src="script.js"></script>
+</body>
+</html>
