@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바이브코딩 (Vibe Coding) | 코딩의 새로운 패러다임</title>
+    <meta name="description" content="AI와 대화하며 코드를 작성하는 새로운 개발 방식, 바이브코딩(Vibe Coding)을 소개합니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-bg-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">Vibe<span>Coding</span></h1>
+            <a href="#about" class="btn btn-outline">알아보기</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">✨ 새로운 개발의 시대</div>
+                <h2 class="hero-title">
+                    코딩, 이제 <span>느낌(Vibe)</span>으로 하세요
+                </h2>
+                <p class="hero-subtitle">
+                    바이브코딩은 복잡한 문법 대신, 당신의 의도와 자연어를 통해 AI와 함께 소프트웨어를 만들어가는 혁신적인 개발 패러다임입니다.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                        바이브코딩 시작하기
+                    </button>
+                    <button class="btn btn-secondary">
+                        데모 보기
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card chat-mockup">
+                    <div class="chat-header">
+                        <div class="dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="chat-title">AI Assistant</div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="message user">
+                            <p>다크 모드와 글래스모피즘이 적용된 랜딩 페이지를 만들어줘.</p>
+                        </div>
+                        <div class="message ai">
+                            <p>네, 세련된 느낌의 웹페이지 구조와 스타일을 생성했습니다. 애니메이션도 추가해 드릴까요?</p>
+                        </div>
+                        <div class="message user">
+                            <p>좋아! 스크롤할 때 요소들이 부드럽게 나타나도록 해줘.</p>
+                        </div>
+                        <div class="code-preview">
+                            <div class="code-line"><span class="keyword">.glass-card</span> {</div>
+                            <div class="code-line indent"><span class="property">background</span>: <span class="value">rgba(255, 255, 255, 0.05)</span>;</div>
+                            <div class="code-line indent"><span class="property">backdrop-filter</span>: <span class="value">blur(10px)</span>;</div>
+                            <div class="code-line">}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="features">
+            <div class="section-header">
+                <h2>왜 <span>바이브코딩</span>인가요?</h2>
+                <p>기존의 코딩 방식을 뛰어넘는 3가지 핵심 가치</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>의도(Intent) 중심</h3>
+                    <p>어떤 프로그래밍 언어나 구문(Syntax)을 쓸지 고민하지 마세요. '무엇을 만들고 싶은지' 그 의도에만 집중하면 AI가 코드로 번역합니다.</p>
+                </div>
+                
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>초고속 프로토타이핑</h3>
+                    <p>아이디어가 떠올랐나요? 바이브코딩을 통해 몇 주가 걸리던 초기 모델 개발을 단 며칠, 혹은 몇 시간 만에 완성할 수 있습니다.</p>
+                </div>
+                
+                <div class="glass-card feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>누구나 개발자</h3>
+                    <p>깊은 기술적 지식이 없어도 괜찮습니다. 기획자와 디자이너, 비전공자도 AI와의 대화를 통해 아이디어를 실제 작동하는 앱으로 구현합니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 VibeCoding. Powered by AI and Imagination.</p>
+        </div>
+    </footer>
+</body>
+</html>
