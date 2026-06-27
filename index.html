@@ -14,6 +14,21 @@
     <div class="blob-bg"></div>
     <div class="blob-bg blob-bg-2"></div>
     
+    <div id="intro-screen" class="intro-screen">
+        <div class="glass-card intro-card">
+            <h2>윤리 핵심 가이드</h2>
+            <div class="intro-image-container">
+                <img src="bid_6a3dd73548413.png" alt="윤리 핵심 가이드" class="intro-image">
+            </div>
+            <div class="intro-checkbox">
+                <input type="checkbox" id="ethics-agree">
+                <label for="ethics-agree">이 사진에 있는 윤리 핵심가이드를 빠짐없이 읽고 이를 지키겠습니다.</label>
+            </div>
+            <button id="start-btn" class="btn btn-primary" disabled>시작하기</button>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
     <nav class="navbar">
         <div class="nav-content">
             <h1 class="logo">Vibe<span>Coding</span></h1>
@@ -126,5 +141,25 @@
             <p>&copy; 2026 VibeCoding. Powered by AI and Imagination.</p>
         </div>
     </footer>
+    </div>
+
+    <script>
+        const agreeCheckbox = document.getElementById('ethics-agree');
+        const startBtn = document.getElementById('start-btn');
+        const introScreen = document.getElementById('intro-screen');
+        const mainContent = document.getElementById('main-content');
+
+        agreeCheckbox.addEventListener('change', (e) => {
+            startBtn.disabled = !e.target.checked;
+        });
+
+        startBtn.addEventListener('click', () => {
+            if (agreeCheckbox.checked) {
+                introScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>
 </body>
 </html>
